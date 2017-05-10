@@ -1,7 +1,7 @@
 module Spree
   module Api
 
-    class UsersController < Spree::Api::BaseController
+    UsersController.class_eval do
 
       before_action :authenticate_user, :except => [:sign_up, :sign_in]
 
@@ -38,4 +38,3 @@ module Spree
     end
   end
 end
-
